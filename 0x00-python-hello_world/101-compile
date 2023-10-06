@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+import sys
+import os
+import py_compile
+
+pyfile = os.environ.get(PYFILE)
+if not pyfile:
+	sys.stderr.write("Error: The PYFILE environment variable is not set.\n")
+	sys.exit(1)
+
+if not os.path.exist(pyfile):
+	sys.stderr.write("Error: The specified Python file '{pyfile}' does not exist.\n")
+	sys.exit(1)
+
+try:
+	py_compile.compile(pyfile, cfile=pyfile + 'c')
+	sys.stdout.write("Successfully compiled '{pyfile}' to '{pyfile}c'\n")
+except:
+	py_compile.PyCompileError:
+	sys.stdout.write("Error: Failed to compile '{pyfile}'\n")
+	sys.exit(1)
