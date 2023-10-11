@@ -5,5 +5,5 @@ islower = __import__('7-islower').islower
 def uppercase(str):
     for char in str:
         print("{}".format(char if not islower(char) else chr(ord(char)-32)),
- end="")
+              end="")
     print(end="\n")
