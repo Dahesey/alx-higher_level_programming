@@ -4,7 +4,7 @@
 
 class Square:
     """Initiate with init self"""
-    def __init__ (self, size=0):
+    def __init__(self, size=0):
         """If conditional statements"""
         if type(size) != int:
             """Raise Typeerror is size is not an integer"""
