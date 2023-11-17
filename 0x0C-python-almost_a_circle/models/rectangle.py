@@ -2,6 +2,7 @@
 """Rectangle class"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """Rectangle Model"""
 
@@ -45,6 +46,7 @@ class Rectangle(Base):
     def x(self):
         """Retrieving x private instance attributes"""
         return self.__x
+
     @x.setter
     def x(self, value):
         if type(x) is not int:
@@ -58,6 +60,7 @@ class Rectangle(Base):
     def y(self):
         """retrieving y private instance attribute"""
         return self.__y
+
     @y.setter
     def y(self, value):
         if type(y) is not int:
@@ -66,7 +69,7 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = value
-    
+
     def area(self):
         """return the area of the public instance attribute rectangle"""
         return self.width * self.height
