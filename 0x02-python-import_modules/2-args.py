@@ -9,7 +9,7 @@ if __name__ == '__main__':
     else:
         arg_str = "argument" if num_args == 1 else "arguments"
         i = 1
-        print("{:d} {:s}".format(num_args, arg_str))
+        print("{:d} {:s}:".format(num_args, arg_str))
         while i <= num_args:
             print("{:d}: {:s}".format(i, sys.argv[i]))
             i += 1
