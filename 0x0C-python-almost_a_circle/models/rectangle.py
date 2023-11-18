@@ -69,3 +69,8 @@ class Rectangle(Base):
     def area(self):
         """return the area of the public instance attribute rectangle"""
         return self.__height * self.__width
+
+    def display(self):
+        print('\n'*self.y, end="")
+        for _ in range(self.height):
+            print(''*self.x + '#'*self.width)
