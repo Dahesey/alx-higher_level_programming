@@ -11,5 +11,5 @@ if (!isNaN(x)) {
     console.log(square);
   }
 } else {
-  console.log('Missing Size');
+  console.log('Missing size');
 }
