@@ -15,12 +15,14 @@ if __name__ == "__main__":
             user=sys.argv[1],
             passwd=sys.argv[2],
             db=sys.argv[3],
+            state_name = sys.argv[4],
             charset='utf8')
-    with db.cursor() as cursor_obj:
-        query = """SELECT * FROM states WHERE BINARY
-        name = '{}' ORDER BY id ASC""".format(search)
-        cursor_obj.execute(query)
-        fetched_state = cursor_obj.fetchall()
-        for state in fetched_state:
-            print(state)
+    cursor = db.cursor()
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(state_name)
+    cursor.execute(query)
 
+    states = cursor.fetchall()
+    for state in states:
+        print(state)
+        cursor.close()
+        db.close()
