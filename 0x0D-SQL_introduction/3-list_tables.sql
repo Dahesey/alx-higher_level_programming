@@ -1,2 +1,3 @@
---A script to list the tables in a database
+-- A script to list the tables in a database
+
 SHOW TABLES;

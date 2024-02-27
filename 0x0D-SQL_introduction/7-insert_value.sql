@@ -1,3 +1,4 @@
---A script to insert values into a table
+-- A script to insert values into a table
+
 INSERT INTO first_table (id, name)
 VALUES(89, Best School');
