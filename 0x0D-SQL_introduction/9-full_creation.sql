@@ -1,10 +1,6 @@
 -- A script that creates a new table in the database
 
-CREATE TABLE IF NOT EXISTS second_table(
-	id INT
-	name VARCHAR(256)
-	score INT
-	);
+CREATE TABLE IF NOT EXISTS second_table(id INT, name VARCHAR(256), score INT);
 	--inserting values into table
 INSERT INTO `second_table`(`id`, `name`, `score`)
 VALUES(1, 'John', 10);
